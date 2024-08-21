@@ -233,6 +233,77 @@ At Bourntec Solutions Inc., I am privileged to work on cutting-edge generative A
                 </div>
             </div>
         </div>
+        <div id="Certifications" class="section">
+            <h2>Certifications</h2>
+            <table>
+                <tr>
+                    <td><img src="images/HR.png" alt=""></td>
+                    <td class="cert-name" data-image="images/python-hr.png">HackerRank: Python Gold Badge (5-Star Programmer)</td>
+                    <td rowspan="7" id="cert_image" style="position: relative;">
+                        <!-- Laptop Image as Background -->
+                        <img id="laptop_background" src="images/laptop.jpg" alt="" style="width: 500px; height: 350px; display: inline-block; margin-left: 40px;">
         
+                        <!-- Certificate Image Positioned Inside Laptop Screen -->
+                        <img id="cert_display" src="" alt="" style="position: absolute; top: 50px; left: 198px; width: 190px; height:190px;opacity: 0; transition: opacity 0.8s ease;">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="images/cisco.png" alt=""></td>
+                    <td class="cert-name" data-image="images/python-essential.png">Cisco: Python Essentials 1</td>
+                </tr>
+                <tr>
+                    <td><img src="images/HR.png" alt=""></td>
+                    <td class="cert-name" data-image="images/sql-hr.png">HackerRank: SQL Gold Badge (5-Star Programmer)</td>
+                </tr>
+                <tr>
+                    <td><img src="images/cisco.png" alt=""></td>
+                    <td class="cert-name" data-image="images/networking-basics.png">Cisco: Networking Basics</td>
+                </tr>
+                <tr>
+                    <td><img src="images/ms.png" alt=""></td>
+                    <td class="cert-name" data-image="images/ms-az.png">Microsoft: Microsoft Certified Azure AI Fundamentals</td>
+                </tr>
+                <tr>
+                    <td><img src="images/ms.png" alt=""></td>
+                    <td class="cert-name" data-image="images/mta.png">Microsoft: MTA Database Fundamentals - Certified 2022</td>
+                </tr>
+                <tr>
+                    <td><img src="images/iirs.jpg" alt=""></td>
+                    <td class="cert-name" data-image="images/iirs-cert.jpeg">IIRS | ISRO: Machine Learning to Deep Learning: A Journey for Remote Sensing Data Classification</td>
+                </tr>
+                <tr>
+                    <td><img src="images/IBM.png" alt=""></td>
+                    <td class="cert-name" data-image="images/da-ibm.png">IBM: Data Analysis Using Python</td>
+                </tr>
+                <tr>
+                    <td><img src="images/aws.jpg" alt=""></td>
+                    <td class="cert-name" data-image="images/aws.png">AWS: AWS Cloud Quest: Cloud Practitioner</td>
+                </tr>
+            </table>
+        </div>
+        
+        <script>
+            const certNames = document.querySelectorAll('.cert-name');
+    const certDisplay = document.getElementById('cert_display');
+
+    certNames.forEach(cert => {
+        cert.addEventListener('mouseover', () => {
+            const imageSrc = cert.getAttribute('data-image');
+            certDisplay.src = imageSrc;
+            certDisplay.style.opacity = '1'; // Fade in
+        });
+
+        cert.addEventListener('mouseout', () => {
+            certDisplay.style.opacity = '0'; // Fade out
+            // Clear the image after fading out
+            setTimeout(() => {
+                if (certDisplay.style.opacity === '0') {
+                    certDisplay.src = ''; 
+                }
+            }, 800); // Delay to match the transition time
+        });
+    });
+        </script>
+          
 </body>
 </html>

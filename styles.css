@@ -223,3 +223,18 @@ gap: 0px;
         height: auto; 
         border-radius: 5px; 
 }
+td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 40px;
+ }
+ table td{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: rgb(53, 54, 54);
+ }
+ table{
+     margin-left: 70px;
+ }
